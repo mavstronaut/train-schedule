@@ -1,13 +1,13 @@
 
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyDAf2mervxkVcsx7_YO_uomXtbNrFnr9SA",
-    authDomain: "employeeapp-1dd72.firebaseapp.com",
-    databaseURL: "https://employeeapp-1dd72.firebaseio.com",
-    projectId: "employeeapp-1dd72",
+    apiKey: "AIzaSyBYYCKNVruzRDYYGA4SW-bp8S43bVXGcW8",
+    authDomain: "train-project-dd46f.firebaseapp.com",
+    databaseURL: "https://train-project-dd46f.firebaseio.com",
+    projectId: "train-project-dd46f",
     storageBucket: "",
-    messagingSenderId: "466486561640",
-    appId: "1:466486561640:web:9fb62e01c11ce9ed"
+    messagingSenderId: "1021143483856",
+    appId: "1:1021143483856:web:1dcdd834881a8531"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -18,29 +18,27 @@
 
   // Initial Values
   var name = "";
-  var role = "";
-  var start = "";
-  var end = "";
-  var rate = "";
+  var destination = "";
+  var first = "";
+  var freq = "";
 
   // Capture Button Click
   $("#submit").on("click", function(event) {
     event.preventDefault();
 
     // Grabbed values from text boxes
-    var name = $("#employee-name").val().trim();
-    var role = $("#role").val().trim();
-    var start = $("#start-year").val().trim();
-    var end = $("#end-year").val().trim();
-    var rate = $("#rate").val().trim();
+    var name = $("#train-name").val().trim();
+    var destination = $("#destination").val().trim();
+    var first = $("#first-train").val().trim();
+    var freq = $("#train-freq").val().trim();
+
 
     // Code for handling the push
     database.ref().push({
       name: name,
-      role: role,
-      start: start,
-      end: end,
-      rate: rate,
+      destination: destination,
+      first: first,
+      freq: freq,
       dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
 
@@ -53,17 +51,16 @@
 
     // Console.loging the last user's data
     console.log(sv.name);
-    console.log(sv.role);
-    console.log(sv.start);
-    console.log(sv.end);
-    console.log(sv.rate);
+    console.log(sv.destination);
+    console.log(sv.first);
+    console.log(sv.freq);
 
     // Change the HTML to reflect
-    $("#name-display").text(sv.name);
-    $("#role-display").text(sv.role);
-    $("#start-year-display").text(sv.start);
-    $("#end-year-display").text(sv.end);
-    $("#rate-display").text(sv.rate);
+    $("#train-name-display").text(sv.name);
+    $("#destination-display").text(sv.role);
+    $("#first-train-display").text(sv.start);
+    $("#train-freq-display").text(sv.end);
+
 
     // Handle the errors
   }, function(errorObject) {

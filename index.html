@@ -35,11 +35,11 @@
     <div class="jumbotron" style="background-color: rgb(16, 25, 46) ; color: white;">
       <h1 class="text-center">
         <strong>
-          <i class="fa fa-newspaper-o"></i> Employee Data Management</strong>
+          <i class="fa fa-newspaper-o"></i> Train Arrival Timing and Administration Panel</strong>
       </h1>
     </div>
 
-    <!-- Row for Searching New York Times -->
+    <!-- Row for Adding the Trains -->
     <div class="row">
       <div class="col-sm-12">
         <br>
@@ -54,34 +54,28 @@
             <!-- Here we create an HTML Form for handling the inputs-->
             <form role="form">
 
-              <!-- Here we create the text box for capturing the search term-->
+              <!-- Here we create the text box for capturing the train name-->
               <div class="form-group">
-                <label for="search">Employee Name</label>
-                <input type="text" class="form-control" id="employee-name">
+                <label for="train-name">Train Name</label>
+                <input type="text" class="form-control" id="train-name">
               </div>
 
               <!-- Here we capture the number of records that the user wants to retrieve  -->
               <div class="form-group">
-                <label for="start-year">Role</label>
-                <input type="text" class="form-control" id="role">
+                <label for="destination">Destination</label>
+                <input type="text" class="form-control" id="destination">
               </div>
 
-              <!-- Here we capture the Start Year Parameter-->
+              <!-- Here we capture the First Train Parameter-->
               <div class="form-group">
-                <label for="start-year">Start Date (DD/MM/YY - ex 01/01/89)</label>
-                <input type="text" class="form-control" id="start-year">
+                <label for="first-train">Start Time UTC (0000 to 2400)</label>
+                <input type="text" class="form-control" id="first-train">
               </div>
 
-              <!-- Here we capture the End Year Parameter -->
+              <!-- Here we capture the Frequency Parameter -->
               <div class="form-group">
-                <label for="end-year">Termination:</label>
-                <input type="text" class="form-control" id="end-year">
-              </div>
-
-              <!-- Here we capture the End Year Parameter -->
-              <div class="form-group">
-                <label for="rate">Monthly Rate:</label>
-                <input type="text" class="form-control" id="rate">
+                <label for="train-freq">Train Frequency</label>
+                <input type="text" class="form-control" id="train-freq">
               </div>
 
               <!-- Here we have our final submit button -->
@@ -109,21 +103,28 @@
             <div class="card-body" id="recent-member">
               <table class="table">
                 <thead>
+                    <!--     
+                        * Train Name
+                        
+                        * Destination 
+                        
+                        * First Train Time -- in military time
+                        
+                        * Frequency -- in minutes
+                    -->
                   <tr>
-                    <th>Name</th>
-                    <th>Role</th>
-                    <th>Start Date</th>
-                    <th>Termination</th>
-                    <th>Monthly Rate</th>
+                    <th>Train Line</th>
+                    <th>Destination</th>
+                    <th>First Train</th>
+                    <th>Frequency</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th id="employee-name-display" scope="employee-name">Name</th>
-                    <th id="role-display" scope="role">Role</th>
-                    <th id="start-year-display" scope="start-year">Start Date:</th>
-                    <th id="end-year-display" scope="end-year">Termination:</th>
-                    <th id="rate-display" scope="rate">Monthly Rate:</th>
+                    <th id="train-name-display" scope="train-name">Train Line</th>
+                    <th id="destination-display" scope="destination">Destination</th>
+                    <th id="first-train-display" scope="first-train">First Train</th>
+                    <th id="train-freq-display" scope="train-freq">Frequency:</th>
                   </tr>
                 </tbody>
               </table>  
