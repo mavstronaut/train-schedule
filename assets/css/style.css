@@ -1,0 +1,11 @@
+.card-body a {
+    word-break: break-all;
+  }
+
+  .card-header {
+    display: grid;
+    }
+
+  .articleHeadline {
+    line-height: 1.5;
+  }
