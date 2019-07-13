@@ -35,7 +35,12 @@ $("#submit").on("click", function(event) {
   var newRow = $("<tr>");
   var newData = $("<th>");
   // By default display the content from sessionStorage
-  newData.append(sessionStorage.getItem("train-name"));
-  newData.append(sessionStorage.getItem("destination"));
-  newData.append(sessionStorage.getItem("first-train"));
-  newData.append(sessionStorage.getItem("train-freq"));
+  // newData.append(sessionStorage.getItem("train-name"));
+  // newData.append(sessionStorage.getItem("destination"));
+  // newData.append(sessionStorage.getItem("first-train"));
+  // newData.append(sessionStorage.getItem("train-freq"));
+
+  $("#train-name-display").text(sessionStorage.getItem("train-name"));
+  $("#destination-display").text(sessionStorage.getItem("destination"));
+  $("#first-train-display").text(sessionStorage.getItem("first-train"));
+  $("#train-freq-display").text(sessionStorage.getItem("train-freq"));
