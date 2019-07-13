@@ -23,9 +23,65 @@
     <div class="jumbotron" style="background-color: rgb(16, 25, 46) ; color: white;">
       <h1 class="text-center">
         <strong>
-          <i class="fa fa-newspaper-o"></i> Administration Panel</strong>
+          <i class="fa fa-newspaper-o"></i>Train Schedule</strong>
       </h1>
     </div>
+
+
+        <!-- This row will handle all of the retrieved trains -->
+        <div class="row">
+            <div class="col-sm-12">
+              <br>
+      
+              <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
+              <div class="card">
+      
+                <!-- card Heading for the retrieved trains box -->
+                <div class="card-header">
+                  <strong>
+                    <i class="fa fa-table"></i> Train Schedule</strong>
+                  <div class="card-body" id="recent-member">
+                    <table class="table">
+                      <thead>
+                          <!--     
+                              * Train Name
+                              
+                              * Destination 
+                              
+                              * First Train Time -- in military time
+                              
+                              * Frequency -- in minutes
+                          -->
+                        <tr>
+                          <th>Train Line</th>
+                          <th>Destination</th>
+                          <th>First Train</th>
+                          <th>Frequency</th>
+                          <th>Next Train</th> 
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th id="train-name-display" scope="train-name">Train Line</th>
+                          <th id="destination-display" scope="destination">Destination</th>
+                          <th id="first-train-display" scope="first-train">First Train</th>
+                          <th id="train-freq-display" scope="train-freq">Frequency</th>
+                          <th id="next-display" scope="train-freq">Arriving</th>
+                        </tr>
+                      </tbody>
+                    </table>  
+      
+                  </div>
+                </div>
+      
+              </div>
+      
+              <!-- This main card will hold each of the resulting articles -->
+              <div class="card-body" id="article-section">
+              </div>
+            </div>
+          </div>
+
 
     <!-- Row for Adding the Trains -->
     <div class="row">
@@ -35,7 +91,7 @@
         <div class="card">
           <div class="card-header">
             <strong>
-              <i class="fa fa-list-alt"></i> Add Employee</strong>
+              <i class="fa fa-list-alt"></i> Administration Panel</strong>
           </div>
           <div class="card-body">
 
@@ -76,60 +132,8 @@
       </div>
     </div>
 
-    <!-- This row will handle all of the retrieved articles -->
-    <div class="row">
-      <div class="col-sm-12">
-        <br>
 
-        <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
-        <div class="card">
 
-          <!-- card Heading for the retrieved articles box -->
-          <div class="card-header">
-            <strong>
-              <i class="fa fa-table"></i> Train Schedule</strong>
-            <div class="card-body" id="recent-member">
-              <table class="table">
-                <thead>
-                    <!--     
-                        * Train Name
-                        
-                        * Destination 
-                        
-                        * First Train Time -- in military time
-                        
-                        * Frequency -- in minutes
-                    -->
-                  <tr>
-                    <th>Train Line</th>
-                    <th>Destination</th>
-                    <th>First Train</th>
-                    <th>Frequency</th>
-                    <th>Next Train</th> 
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th id="train-name-display" scope="train-name">Train Line</th>
-                    <th id="destination-display" scope="destination">Destination</th>
-                    <th id="first-train-display" scope="first-train">First Train</th>
-                    <th id="train-freq-display" scope="train-freq">Frequency</th>
-                    <th id="next-display" scope="train-freq">Arriving</th>
-                  </tr>
-                </tbody>
-              </table>  
-
-            </div>
-          </div>
-
-        </div>
-
-        <!-- This main card will hold each of the resulting articles -->
-        <div class="card-body" id="article-section">
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Footer Region -->
   <div class="row">

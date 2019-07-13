@@ -4,7 +4,7 @@ $("#submit").on("click", function(event) {
     event.preventDefault();
 
     // Capture user inputs and store them into variables
-    var name = $("#employee-name").val().trim();
+    var name = $("#train-name").val().trim();
     var destination = $("#destination").val().trim();
     var first = $("#first-train").val().trim();
     var freq = $("#train-freq").val().trim();
