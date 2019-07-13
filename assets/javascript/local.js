@@ -1,0 +1,51 @@
+// Capture Button Click
+$("#submit").on("click", function(event) {
+    // prevent page from refreshing when form tries to submit itself
+    event.preventDefault();
+
+    // Capture user inputs and store them into variables
+    var name = $("#train-name").val().trim();
+    var destination = $("#destination").val().trim();
+    var first = $("#first-train").val().trim();
+    var freq = $("#train-freq").val().trim();
+
+
+    // Console log each of the user inputs to confirm we are receiving them
+    console.log(name);
+    console.log(destination);
+    console.log(first);
+    console.log(freq);
+
+    // Replaces the content in the "recent-member" div with the new info
+    $("#train-name-display").text(name);
+    $("#destination-display").text(destination);
+    $("#first-train-display").text(first);
+    $("#train-freq-display").text(freq);
+
+    // Clear sessionStorage
+    // sessionStorage.clear();
+
+    // Store all content into sessionStorage
+    sessionStorage.setItem("train-name", name);
+    sessionStorage.setItem("destination", destination);
+    sessionStorage.setItem("first-train", first);
+    sessionStorage.setItem("train-freq", freq);
+  });
+
+  // By default display the content from sessionStorage
+  $("#train-name-display").text(sessionStorage.getItem("train-name"));
+  $("#destination-display").text(sessionStorage.getItem("destination"));
+  $("#first-train-display").text(sessionStorage.getItem("first-train"));
+  $("#train-freq-display").text(sessionStorage.getItem("train-freq"));
+
+
+
+//   Looking at the current time, we need to calculate the frequency
+
+// then we're going to need to display that calculation
+// next = ""
+
+// sessionStorage.setItem("next-train", next);
+
+// $("#next-display").text(sessionStorage.getItem("next-train"));
+
