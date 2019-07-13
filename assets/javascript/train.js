@@ -42,7 +42,7 @@
     // store next train
     sessionStorage.setItem("next-train", nextTrain);
     // display next train
-    $("#next-display").text(sessionStorage.getItem("next-train"));
+    $("#next-display").append(sessionStorage.getItem("next-train"));
 
 
     });
