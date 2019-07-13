@@ -1,6 +1,6 @@
     //Questions
     // How does it work for every train?
-    // how does the code handle 
+    // how does the code add additional rows instead of overwriting only
     $("#submit").on("click", function(event) {
       event.preventDefault();
 
