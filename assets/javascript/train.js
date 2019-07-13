@@ -1,9 +1,15 @@
+    //Questions
+    // How does it work for every train?
+    // how does the code handle 
+    $("#submit").on("click", function(event) {
+      event.preventDefault();
+
     // Assumptions   
-    var name = $("#employee-name").val().trim();
-    var destination = $("#destination").val().trim();
-    var first = $("#first-train").val().trim();
-    var freq = $("#train-freq").val().trim();
-    var next = "" // this will probably change after we do the calculation
+    // var name = $("#employee-name").val().trim();
+    // var destination = $("#destination").val().trim();
+    // var first = $("#first-train").val().trim();
+    // var freq = $("#train-freq").val().trim();
+    var nextTrain = "" // this will probably change after we do the calculation
 
     var tFrequency = sessionStorage.getItem("train-freq");
 
@@ -39,3 +45,4 @@
     $("#next-display").text(sessionStorage.getItem("next-train"));
 
 
+    }
