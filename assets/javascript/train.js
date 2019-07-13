@@ -32,10 +32,10 @@
     // 5 + 3:16 = 3:21
 
     // Assumptions
-    var tFrequency = 3;
+    var tFrequency = 16;
 
     // Time is 3:30 AM
-    var firstTime = "03:30";
+    var firstTime = "05:05";
 
     // First Time (pushed back 1 year to make sure it comes before current time)
     var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
