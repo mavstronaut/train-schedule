@@ -60,3 +60,22 @@
     // Next Train
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
     console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+
+
+    var name = $("#employee-name").val().trim();
+    var destination = $("#destination").val().trim();
+    var first = $("#first-train").val().trim();
+    var freq = $("#train-freq").val().trim();
+    var next = "" // this will probably change after we do the calculation
+
+    sessionStorage.getItem("train-name");
+    sessionStorage.getItem("destination");
+    sessionStorage.getItem("first-train");
+
+
+    
+    sessionStorage.setItem("next-train", next);
+
+    $("#next-display").text(sessionStorage.getItem("next-train"));
+
+

@@ -37,3 +37,15 @@ $("#submit").on("click", function(event) {
   $("#destination-display").text(sessionStorage.getItem("destination"));
   $("#first-train-display").text(sessionStorage.getItem("first-train"));
   $("#train-freq-display").text(sessionStorage.getItem("train-freq"));
+
+
+
+//   Looking at the current time, we need to calculate the frequency
+
+// then we're going to need to display that calculation
+// next = ""
+
+// sessionStorage.setItem("next-train", next);
+
+// $("#next-display").text(sessionStorage.getItem("next-train"));
+
