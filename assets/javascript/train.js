@@ -32,10 +32,16 @@
     // 5 + 3:16 = 3:21
 
     // Assumptions
-    var tFrequency = 16;
+    var name = $("#employee-name").val().trim();
+    var destination = $("#destination").val().trim();
+    var first = $("#first-train").val().trim();
+    var freq = $("#train-freq").val().trim();
+    var next = "" // this will probably change after we do the calculation
+
+    var tFrequency = sessionStorage.getItem("train-freq");
 
     // Time is 3:30 AM
-    var firstTime = "05:05";
+    var firstTime = sessionStorage.getItem("first-train");;
 
     // First Time (pushed back 1 year to make sure it comes before current time)
     var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
@@ -62,15 +68,10 @@
     console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
 
-    var name = $("#employee-name").val().trim();
-    var destination = $("#destination").val().trim();
-    var first = $("#first-train").val().trim();
-    var freq = $("#train-freq").val().trim();
-    var next = "" // this will probably change after we do the calculation
 
     sessionStorage.getItem("train-name");
     sessionStorage.getItem("destination");
-    sessionStorage.getItem("first-train");
+    
 
 
     
