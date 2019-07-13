@@ -31,7 +31,7 @@
     // 7 - 2 = 5 minutes away
     // 5 + 3:16 = 3:21
 
-    // Assumptions
+    // Assumptions   
     var name = $("#employee-name").val().trim();
     var destination = $("#destination").val().trim();
     var first = $("#first-train").val().trim();
@@ -66,17 +66,9 @@
     // Next Train
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
     console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
-
-
-
-    sessionStorage.getItem("train-name");
-    sessionStorage.getItem("destination");
-    
-
-
-    
-    sessionStorage.setItem("next-train", next);
-
+    // store next train
+    sessionStorage.setItem("next-train", nextTrain);
+    // display next train
     $("#next-display").text(sessionStorage.getItem("next-train"));
 
 
