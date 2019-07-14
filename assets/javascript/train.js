@@ -1,7 +1,7 @@
     //Questions
     // How does it work for every train?
     // how does the code add additional rows instead of overwriting only
-    $("#submit").on("click", function(event) {
+    $(document).ready(), function(event) {
       event.preventDefault();
 
     // Assumptions   
@@ -44,5 +44,10 @@
     // display next train
     $("#next-display").text(sessionStorage.getItem("next-train"));
 
-
-    });
+    function timerIncrement() {
+      idleTime = idleTime + 1;
+      if (idleTime > 1) { // 20 minutes
+      $('#exampleModalCenter').modal()
+      }
+  }
+    };

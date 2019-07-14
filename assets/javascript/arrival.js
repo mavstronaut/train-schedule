@@ -1,4 +1,57 @@
-    // Prettify the train first time
+         var firebaseConfig = {
+            apiKey: "AIzaSyBYYCKNVruzRDYYGA4SW-bp8S43bVXGcW8",
+            authDomain: "train-project-dd46f.firebaseapp.com",
+            databaseURL: "https://train-project-dd46f.firebaseio.com",
+            projectId: "train-project-dd46f",
+            storageBucket: "",
+            messagingSenderId: "1021143483856",
+            appId: "1:1021143483856:web:1dcdd834881a8531"
+        };
+        
+        firebase.initializeApp(firebaseConfig);
+        
+        var database = firebase.database();
+
+
+
+        $("#submit").on("click", function(event) {
+        event.preventDefault();
+        var trainName = $("#train-name-input").val().trim();
+        var trainDestination = $("#destination-input").val().trim();
+        var trainFirstTime = moment($("#first-time-input").val().trim(), "hh:mm").format("X");
+        var trainFrequency = $("#frequency-input").val().trim();
+        var newTrain = {
+        name: trainName,
+        destination: trainDestination,
+        first: trainFirstTime,
+        frequency: trainFrequency,
+        };
+        $('#IDModal').modal('hide'); 
+        database.ref().push(newTrain);
+        
+        console.log('newTrain.name = ' + newTrain.name);
+        console.log('newTrain.destination = ' + newTrain.destination);
+        console.log('newTrain.first = ' + newTrain.first);
+        console.log('newTrain.frequency = ' + newTrain.frequency);
+        
+        $("#train-name-input").val("");
+        $("#destination-input").val("");
+        $("#first-time-input").val("");
+        $("#frequency-input").val("");
+        });
+        database.ref().on("child_added", function(childSnapshot, prevChildKey) {
+        console.log(childSnapshot.val());
+        var trainName = childSnapshot.val().name;
+        var trainDestination = childSnapshot.val().destination;
+        var trainFirstTime = childSnapshot.val().first;
+        var trainFrequency = childSnapshot.val().frequency;
+        console.log('trainName = ' + trainName);
+        console.log('trainDestination = ' + trainDestination);
+        console.log('trainFirstTime = ' + trainFirstTime);
+        console.log('trainFrequency = ' + trainFrequency);
+
+
+// Prettify the train first time
         var trainFirstTimePretty = moment.unix(trainFirstTime).format("LT");
         console.log('trainFirstTimePretty = ' + trainFirstTimePretty);
         // Current Time
