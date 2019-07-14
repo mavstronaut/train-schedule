@@ -41,33 +41,26 @@
                   <strong>
                     <i class="fa fa-table"></i> Train Schedule</strong>
                   <div class="card-body" id="recent-member">
-                    <table class="table">
+                    <table class="table" id="train-table">
                       <thead>
-                          <!--     
-                              * Train Name
-                              
-                              * Destination 
-                              
-                              * First Train Time -- in military time
-                              
-                              * Frequency -- in minutes
-                          -->
                         <tr>
                           <th>Train Line</th>
                           <th>Destination</th>
                           <th>First Train</th>
                           <th>Frequency</th>
                           <th>Next Train</th> 
+                          <th>Arriving</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <th id="train-name-display" scope="train-name">Train Line</th>
+                        <!-- <tr> -->
+                          <!-- <th id="train-name-display" scope="train-name">Train Line</th>
                           <th id="destination-display" scope="destination">Destination</th>
                           <th id="first-train-display" scope="first-train">First Train</th>
                           <th id="train-freq-display" scope="train-freq">Frequency</th>
-                          <th id="next-display" scope="train-freq">Arriving</th>
-                        </tr>
+                          <th id="next-display" scope="train-freq">Next Arrival</th>
+                          <th id="minutes-display" scope="minutes">Minutes Away</th> -->
+                        <!-- </tr> -->
                       </tbody>
                     </table>  
       
@@ -82,56 +75,53 @@
             </div>
           </div>
 
+          <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <strong><i class="fa fa-list-alt"></i> Administration Panel</strong>
+                </button>
+              </h5>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                
+                <!-- Here we create an HTML Form for handling the inputs-->
+              <form role="form">
 
-    <!-- Row for Adding the Trains -->
-    <div class="row">
-      <div class="col-sm-12">
-        <br>
-        <!-- First card is for handling the search parameters -->
-        <div class="card">
-          <div class="card-header">
-            <strong>
-              <i class="fa fa-list-alt"></i> Administration Panel</strong>
+                  <!-- Here we create the text box for capturing the train name-->
+                  <div class="form-group">
+                    <label for="train-name">Train Name</label>
+                    <input type="text" class="form-control" id="train-name">
+                  </div>
+  
+                  <!-- Here we capture the number of records that the user wants to retrieve  -->
+                  <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <input type="text" class="form-control" id="destination">
+                  </div>
+  
+                  <!-- Here we capture the First Train Parameter-->
+                  <div class="form-group">
+                    <label for="first-train">Start Time UTC (00:00 to 24:00)</label>
+                    <input type="text" class="form-control" id="first-train">
+                  </div>
+  
+                  <!-- Here we capture the Frequency Parameter -->
+                  <div class="form-group">
+                    <label for="train-freq">Train Frequency</label>
+                    <input type="text" class="form-control" id="train-freq">
+                  </div>
+  
+                  <!-- Here we have our final submit button -->
+                  <button type="submit" class="btn btn-default" id="submit">
+                    <i class="fa fa-search"></i> Submit</button>
+  
+                </form>
+                
+              </div>
+            </div>
           </div>
-          <div class="card-body">
-
-            <!-- Here we create an HTML Form for handling the inputs-->
-            <form role="form">
-
-              <!-- Here we create the text box for capturing the train name-->
-              <div class="form-group">
-                <label for="train-name">Train Name</label>
-                <input type="text" class="form-control" id="train-name">
-              </div>
-
-              <!-- Here we capture the number of records that the user wants to retrieve  -->
-              <div class="form-group">
-                <label for="destination">Destination</label>
-                <input type="text" class="form-control" id="destination">
-              </div>
-
-              <!-- Here we capture the First Train Parameter-->
-              <div class="form-group">
-                <label for="first-train">Start Time UTC (00:00 to 24:00)</label>
-                <input type="text" class="form-control" id="first-train">
-              </div>
-
-              <!-- Here we capture the Frequency Parameter -->
-              <div class="form-group">
-                <label for="train-freq">Train Frequency</label>
-                <input type="text" class="form-control" id="train-freq">
-              </div>
-
-              <!-- Here we have our final submit button -->
-              <button type="submit" class="btn btn-default" id="submit">
-                <i class="fa fa-search"></i> Submit</button>
-
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
 
 
 
@@ -160,10 +150,10 @@
   <!-- moment JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
   <!-- Code to the JavaScript File -->
-  <script src="./assets/javascript/firebase.js"></script>
+  <script src="./assets/javascript/arrival.js"></script>
   <script src="./assets/javascript/local.js"></script>
-  <script src="./assets/javascript/moment.js"></script>
-  <script src="./assets/javascript/train.js"></script>
+  <!-- <script src="./assets/javascript/moment.js"></script> -->
+  <!-- <script src="./assets/javascript/train.js"></script> -->
 </body>
 
 </html>
