@@ -41,7 +41,7 @@
                   <strong>
                     <i class="fa fa-table"></i> Train Schedule</strong>
                   <div class="card-body" id="recent-member">
-                    <table class="table">
+                    <table class="table" id="train-table">
                       <thead>
                         <tr>
                           <th>Train Line</th>
@@ -49,20 +49,18 @@
                           <th>First Train</th>
                           <th>Frequency</th>
                           <th>Next Train</th> 
+                          <th>Arriving</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <th id="train-name-display" scope="train-name">Train Line</th>
+                        <!-- <tr> -->
+                          <!-- <th id="train-name-display" scope="train-name">Train Line</th>
                           <th id="destination-display" scope="destination">Destination</th>
                           <th id="first-train-display" scope="first-train">First Train</th>
                           <th id="train-freq-display" scope="train-freq">Frequency</th>
                           <th id="next-display" scope="train-freq">Next Arrival</th>
-                          <th id="minutes-display" scope="minutes">Minutes Away</th>
-                        </tr>
-                        <tr id="new-row">
-                          <th></th>
-                        </tr>
+                          <th id="minutes-display" scope="minutes">Minutes Away</th> -->
+                        <!-- </tr> -->
                       </tbody>
                     </table>  
       
@@ -152,10 +150,10 @@
   <!-- moment JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
   <!-- Code to the JavaScript File -->
-  <script src="./assets/javascript/firebase.js"></script>
+  <script src="./assets/javascript/arrival.js"></script>
   <script src="./assets/javascript/local.js"></script>
-  <script src="./assets/javascript/moment.js"></script>
-  <script src="./assets/javascript/train.js"></script>
+  <!-- <script src="./assets/javascript/moment.js"></script> -->
+  <!-- <script src="./assets/javascript/train.js"></script> -->
 </body>
 
 </html>

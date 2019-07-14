@@ -16,17 +16,17 @@
 
         $("#submit").on("click", function(event) {
         event.preventDefault();
-        var trainName = $("#train-name-input").val().trim();
-        var trainDestination = $("#destination-input").val().trim();
-        var trainFirstTime = moment($("#first-time-input").val().trim(), "hh:mm").format("X");
-        var trainFrequency = $("#frequency-input").val().trim();
+        var trainName = $("#train-name").val().trim();
+        var trainDestination = $("#destination").val().trim();
+        var trainFirstTime = moment($("#first-train").val().trim(), "hh:mm").format("X");
+        var trainFrequency = $("#train-freq").val().trim();
         var newTrain = {
         name: trainName,
         destination: trainDestination,
         first: trainFirstTime,
         frequency: trainFrequency,
         };
-        $('#IDModal').modal('hide'); 
+
         database.ref().push(newTrain);
         
         console.log('newTrain.name = ' + newTrain.name);
@@ -34,10 +34,10 @@
         console.log('newTrain.first = ' + newTrain.first);
         console.log('newTrain.frequency = ' + newTrain.frequency);
         
-        $("#train-name-input").val("");
-        $("#destination-input").val("");
-        $("#first-time-input").val("");
-        $("#frequency-input").val("");
+        $("#train-name").val("");
+        $("#destination").val("");
+        $("#first-train").val("");
+        $("#train-freq").val("");
         });
         database.ref().on("child_added", function(childSnapshot, prevChildKey) {
         console.log(childSnapshot.val());
@@ -51,7 +51,7 @@
         console.log('trainFrequency = ' + trainFrequency);
 
 
-// Prettify the train first time
+        // Prettify the train first time
         var trainFirstTimePretty = moment.unix(trainFirstTime).format("LT");
         console.log('trainFirstTimePretty = ' + trainFirstTimePretty);
         // Current Time
@@ -91,6 +91,5 @@
         function timerIncrement() {
         idleTime = idleTime + 1;
         if (idleTime > 1) { // 20 minutes
-        $('#exampleModalCenter').modal()
         }
     }
