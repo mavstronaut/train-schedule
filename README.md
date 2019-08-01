@@ -21,4 +21,4 @@
   * Styling and theme are completely up to you. Get Creative!
 
 ## Example Images
-![train-sched](https://user-images.githubusercontent.com/16119635/62295096-52193f80-b43a-11e9-967b-1fe10c243e81.png)
+![train-sched](https://user-images.githubusercontent.com/16119635/62295413-fdc28f80-b43a-11e9-9937-ff7981b3af36.png)
